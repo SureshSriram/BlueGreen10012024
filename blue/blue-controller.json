@@ -1,0 +1,37 @@
+{
+   "kind":"ReplicationController",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"blue",
+      "labels":{
+         "app":"blue-green"
+      }
+   },
+   "spec":{
+      "replicas":1,
+      "selector":{
+         "app":"blue-green"
+      },
+      "template":{
+         "metadata":{
+            "labels":{
+               "app":"blue-green"
+            }
+         },
+         "spec":{
+            "containers":[
+               {
+                  "name":"blue",
+                  "image":"spurrieysah/testblueimage",
+                  "ports":[
+                     {
+                        "name":"http-server",
+                        "containerPort":80
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}

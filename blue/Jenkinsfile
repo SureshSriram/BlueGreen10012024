@@ -1,0 +1,13 @@
+@Library('retail') _
+
+env.REPO_NAME             = 'yubi-fin-b2c-aspero-api-automation'
+env.serviceName           = 'aspero-api-automation'
+env.artifactType          = "docker"
+env.checkMarxProjectName  = "B2C - api-automation"
+env.sonarCoverageExcludes = ""
+env.skipCodeChecks        = "false"
+env.REPOS_FOR_ARTIFACTS   = ['master']
+backend()
+
+
+docker pull postgres

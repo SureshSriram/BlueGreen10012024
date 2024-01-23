@@ -4,10 +4,8 @@ env.REPO_NAME             = 'yubi-fin-b2c-aspero-api-automation'
 env.serviceName           = 'aspero-api-automation'
 env.artifactType          = "docker"
 env.checkMarxProjectName  = "B2C - api-automation"
+env.mavenRemote           = "https://com-yubi-fin-b2c-688568033138.d.codeartifact.ap-south-1.amazonaws.com/maven/core-api-common/"
 env.sonarCoverageExcludes = ""
 env.skipCodeChecks        = "false"
 env.REPOS_FOR_ARTIFACTS   = ['master']
 backend()
-
-
-docker pull postgres
